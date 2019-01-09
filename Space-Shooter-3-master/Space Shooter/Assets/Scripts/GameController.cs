@@ -34,6 +34,9 @@ public class GameController : MonoBehaviour {
 		StartCoroutine (SpawnWaves ());
 	}
 	void Update () {
+		if (player == null) {
+			gameover2 = true;
+		}
 		if (restart2) {
 			if (Input.GetKeyDown(KeyCode.R)){
 				SceneManager.LoadScene ("Main");
@@ -64,12 +67,6 @@ public class GameController : MonoBehaviour {
 				restart.text = "Press 'r' for Restart";
 				restart2 = true;
 				break;
-			}
-			if (Time.timeSinceLevelLoad >= 318.0f) {
-				player.SetActive (false);
-				sun.SetActive (false);
-				Win = true;
-				gameover.text = "You Win! Congratulations!!";				
 			}
 		}
 	}

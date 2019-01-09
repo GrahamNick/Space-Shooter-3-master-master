@@ -9,17 +9,23 @@ public class Boundary
 public class PlayerMover : MonoBehaviour {
 	public float speed;
 	public float tilt;
+	public float angle;
 	public Boundary boundary;
 	public GameObject shot;
 	public Transform shotSpawn1;
 	public Transform shotSpawn2;
 	public Transform shotSpawn3;
+	public float zRotation;
+	private Quaternion originalRotation;
 	public float fireDelta = 0.5f;
 	private float nextFire = 0.5f;
+
+	void Start() {
+		originalRotation = transform.rotation;
+	}
 	void Update() {
 
-		if (Input.GetButton("Fire1") && Time.time > nextFire)
-		{
+		if (Input.GetButton ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireDelta;
 			Instantiate (
 				shot,
@@ -36,11 +42,14 @@ public class PlayerMover : MonoBehaviour {
 				shotSpawn3.position,
 				shotSpawn3.rotation
 			);// as GameObject;
-			GetComponent<AudioSource> ().Play();
+
+			GetComponent<AudioSource> ().Play ();
 		}
 
+
 	}
-	void FixedUpdate () {
+	void FixedUpdate ()
+	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
@@ -54,6 +63,16 @@ public class PlayerMover : MonoBehaviour {
 
 		);
 
-		GetComponent<Rigidbody> ().rotation = Quaternion.Euler (GetComponent<Rigidbody> ().velocity.y * -tilt, GetComponent<Rigidbody> ().velocity.x * tilt, 0.0f);
+		if (Input.GetKey (KeyCode.Q)) {
+			transform.rotation = transform.rotation * Quaternion.AngleAxis (Time.deltaTime * zRotation, Vector3.forward);
+		} else if (Input.GetKey (KeyCode.E)) {
+			transform.rotation = transform.rotation * Quaternion.AngleAxis (Time.deltaTime * zRotation, Vector3.back);
+
+		}
+		GetComponent<Rigidbody>().rotation = Quaternion.Euler (
+			GetComponent<Rigidbody> ().velocity.y * -tilt + transform.rotation.z,
+			GetComponent<Rigidbody> ().velocity.x * tilt,
+			0.0f
+		);
 	}
 }

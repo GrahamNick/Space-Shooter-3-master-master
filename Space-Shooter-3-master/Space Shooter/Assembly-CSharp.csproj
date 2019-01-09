@@ -83,11 +83,14 @@
      <Compile Include="Assets\Scripts\DestroyByContact.cs" />
      <Compile Include="Assets\Scripts\destroyByTime.cs" />
      <Compile Include="Assets\Scripts\evasiveManuver.cs" />
+     <Compile Include="Assets\Scripts\eyeLazerLeft.cs" />
+     <Compile Include="Assets\Scripts\eyeLazerRight.cs" />
      <Compile Include="Assets\Scripts\followPlayer.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\mover.cs" />
      <Compile Include="Assets\Scripts\PlayerMover.cs" />
      <Compile Include="Assets\Scripts\randomRotator.cs" />
+     <Compile Include="Assets\Scripts\rotate.cs" />
      <Compile Include="Assets\Scripts\SpinFree.cs" />
      <Compile Include="Assets\Scripts\SunWin.cs" />
      <Compile Include="Assets\Scripts\WeaponCont.cs" />
