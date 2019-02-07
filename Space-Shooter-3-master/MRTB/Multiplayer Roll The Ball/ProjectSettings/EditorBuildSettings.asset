@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/TitleScreen.unity
+    guid: 33c8f9c9a09c94c44915a4b7b2a3315c
+  - enabled: 1
+    path: Assets/_Scenes/HubScene.unity
+    guid: 13e46a284ffc87b458356b4ec5b3c305
+  - enabled: 1
+    path: Assets/_Scenes/CollectiblesScene.unity
+    guid: faf5b6bae37f8c94c9f2c5efebf7852a
+  - enabled: 1
+    path: Assets/_Scenes/MazeScene.unity
+    guid: 8f2d92c0c4381ae45a5824f9b0019e71
+  - enabled: 1
+    path: Assets/_Scenes/SumoScene.unity
+    guid: 499224d6cae4aa9418452cec0c62c6c5

@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer Roll The Ball", "Assembly-CSharp.csproj", "{ACAB35C2-7112-8C00-E2A5-02742954DE77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACAB35C2-7112-8C00-E2A5-02742954DE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAB35C2-7112-8C00-E2A5-02742954DE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAB35C2-7112-8C00-E2A5-02742954DE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAB35C2-7112-8C00-E2A5-02742954DE77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
